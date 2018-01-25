@@ -13,6 +13,7 @@ class App extends React.Component {
       ]
     }
     this.handleCountUp = this.handleCountUp.bind(this);
+    this.handleCountDown = this.handleCountDown.bind(this);
 
   }
 
@@ -29,12 +30,20 @@ class App extends React.Component {
     // console.log(newMasterCounterArray);
   }
 
-  // handleCountDown() {
-  //   console.log('newNumber');
-  //   let newNumber = this.state.number;
-  //   newNumber -= 1;
-  //   this.setState({number: newNumber});
-  // }
+  handleCountDown(title) {
+    let newMasterCounterArray = this.state.masterCounterArray.slice();
+    for (var i = 0; i < newMasterCounterArray.length; i++) {
+      if (newMasterCounterArray[i].title === title) {
+        newMasterCounterArray[i].number-=1
+      }
+    }
+    this.setState({masterCounterArray: newMasterCounterArray});
+
+  }
+
+
+
+
 
   render(){
     return(

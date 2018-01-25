@@ -8,16 +8,35 @@ function Counter(props){
     props.onCounterUp(props.title);
   }
 
-    return(
-      <div>
-        <p>{props.title}</p>
-        <h4>{props.number}</h4>
-        <button onClick={handleUpVoteButton}>Up</button>
+  function handleDownVoteButton() {
+    props.onCounterDown(props.title);
+  }
 
-      </div>
-    );
+  let styles = {
+    container: {
+      width: '100px',
+      padding: '10px',
+      border: '1px solid #DDD',
+      marginBottom: '10px',
+      fontFamily: 'sans-serif',
+      fontWeight: '200'
+    },
+
+  }
+
+
+  return(
+    <div style={styles.container}>
+      <p>{props.title}</p>
+      <button onClick={handleUpVoteButton}>Up</button><br/>
+        <p>{props.number}</p>
+      <button onClick={handleDownVoteButton}>Down</button>
+    </div>
+  );
 
 }
+
+
 
 Counter.PropTypes = {
   number: PropTypes.number
