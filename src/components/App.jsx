@@ -24,9 +24,10 @@ class App extends React.Component {
         newMasterCounterArray[i].number+=1
       }
     }
+    this.setState({masterCounterArray: this.sortArrays(newMasterCounterArray)});
 
-    this.setState({masterCounterArray: newMasterCounterArray});
   }
+
 
   handleCountDown(title) {
     let newMasterCounterArray = this.state.masterCounterArray.slice();
@@ -35,8 +36,16 @@ class App extends React.Component {
         newMasterCounterArray[i].number-=1
       }
     }
-    this.setState({masterCounterArray: newMasterCounterArray});
+    this.setState({masterCounterArray: this.sortArrays(newMasterCounterArray)});
+  }
 
+  sortArrays(arrayToSort) {
+    for (let i = 0; i < arrayToSort.length; i++) {
+      arrayToSort.sort(function(a: arrayToSort, b: arrayToSort){
+        return b.number - a.number
+      })
+    }
+    return arrayToSort;
   }
 
 
