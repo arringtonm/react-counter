@@ -13,23 +13,22 @@ class App extends React.Component {
       ]
     }
     this.handleCountUp = this.handleCountUp.bind(this);
-    this.handleCountDown = this.handleCountDown.bind(this);
 
   }
 
   handleCountUp() {
-    let newNumber = this.state.number;
-    newNumber += 1;
-    console.log(newNumber);
-    this.setState({number: newNumber});
+    let newMasterCounterArray = this.state.masterCounterArray.slice();
+    newMasterCounterArray.key.number+=1;
+    console.log(newMasterCounterArray);
+    this.setState({masterCounterArray: newMasterCounterArray});
   }
 
-  handleCountDown() {
-    console.log('newNumber');
-    let newNumber = this.state.number;
-    newNumber -= 1;
-    this.setState({number: newNumber});
-  }
+  // handleCountDown() {
+  //   console.log('newNumber');
+  //   let newNumber = this.state.number;
+  //   newNumber -= 1;
+  //   this.setState({number: newNumber});
+  // }
 
   render(){
     return(
