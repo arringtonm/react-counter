@@ -16,11 +16,17 @@ class App extends React.Component {
 
   }
 
-  handleCountUp() {
+  handleCountUp(title) {
     let newMasterCounterArray = this.state.masterCounterArray.slice();
-    newMasterCounterArray.key.number+=1;
-    console.log(newMasterCounterArray);
+    for (var i = 0; i < newMasterCounterArray.length; i++) {
+      if (newMasterCounterArray[i].title === title) {
+        newMasterCounterArray[i].number+=1
+      }
+    }
     this.setState({masterCounterArray: newMasterCounterArray});
+    // newMasterCounterArray.for
+    // newMasterCounterArray.key.number+=1;
+    // console.log(newMasterCounterArray);
   }
 
   // handleCountDown() {
@@ -34,7 +40,10 @@ class App extends React.Component {
     return(
       <div>
         <Header/>
-        <CounterList counterArray={this.state.masterCounterArray} onCounterUp={this.handleCountUp} onCounterDown={this.handleCountDown}/>
+        <CounterList
+          counterArray={this.state.masterCounterArray}
+          onCounterUp={this.handleCountUp}
+          onCounterDown={this.handleCountDown}/>
       </div>
     );
   }
