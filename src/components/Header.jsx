@@ -8,7 +8,7 @@ function Header(){
   }
 
   return (
-    <h1 style={styles}>This is a Counter</h1>
+    <h1 style={styles}>Reactit</h1>
   );
 }
 
