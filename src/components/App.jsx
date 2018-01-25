@@ -24,10 +24,8 @@ class App extends React.Component {
         newMasterCounterArray[i].number+=1
       }
     }
+
     this.setState({masterCounterArray: newMasterCounterArray});
-    // newMasterCounterArray.for
-    // newMasterCounterArray.key.number+=1;
-    // console.log(newMasterCounterArray);
   }
 
   handleCountDown(title) {

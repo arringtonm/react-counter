@@ -47,7 +47,7 @@ function Counter(props){
       transform: 'rotate(90deg)',
       marginTop: '-12px',
       marginBottom: '10px'
-    },
+    }
 
   }
 

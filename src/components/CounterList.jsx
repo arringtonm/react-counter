@@ -2,10 +2,16 @@ import React from 'react';
 import Counter from './Counter';
 
 function CounterList(props) {
+
+
+  
+
+
+
   return(
     <div>
       {props.counterArray.map((counter, index) => {
-        console.log(counter);
+        // console.log(counter);
         return (
           <Counter
             onCounterUp={props.onCounterUp}
