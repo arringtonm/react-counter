@@ -57,10 +57,9 @@ function Counter(props){
       <div style={styles.header}>
         <p>{props.title}</p>
       </div>
-      <img onClick={handleUpVoteButton} style={styles.arrowStyle} src='http://laoblogger.com/images/arrow-pictures-2.jpg' />
+      <img onClick={handleUpVoteButton} style={styles.arrowStyle} src='https://www.dropbox.com/s/5lmjfdhr70v67wt/arrow.jpg?dl=1' />
       <p>{props.number}</p>
-      <img onClick={handleDownVoteButton} style={styles.arrowStyleUpsideDown} src='http://laoblogger.com/images/arrow-pictures-2.jpg' />
-
+      <img onClick={handleDownVoteButton} style={styles.arrowStyleUpsideDown} src='https://www.dropbox.com/s/5lmjfdhr70v67wt/arrow.jpg?dl=1' />
     </div>
   );
 
